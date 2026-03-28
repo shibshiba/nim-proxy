@@ -159,9 +159,8 @@ app.post('/v1/chat/completions', async (req, res) => {
       stream: stream || false
     };
 
-    if (ENABLE_THINKING_MODE) {
-      nimRequest.extra_body = { chat_template_kwargs: { thinking: true } };
-    }
+    // Always explicitly set thinking based on the toggle
+    nimRequest.extra_body = { chat_template_kwargs: { thinking: ENABLE_THINKING_MODE } };
     
     console.log('Sending request to NVIDIA NIM:', JSON.stringify(nimRequest, null, 2));
     
