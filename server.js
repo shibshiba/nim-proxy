@@ -25,7 +25,7 @@ const NIM_API_KEY = process.env.NIM_API_KEY;
 const SHOW_REASONING = false; // Set to true to show reasoning with <think> tags
 
 // 🔥 THINKING MODE TOGGLE - Enables thinking for specific models that support it
-const ENABLE_THINKING_MODE = false; // Set to true to enable chat_template_kwargs thinking parameter
+const ENABLE_THINKING_MODE = false; // Set to true to enable thinking mode
 
 // Model mapping (adjust based on available NIM models)
 const MODEL_MAPPING = {
@@ -156,11 +156,10 @@ app.post('/v1/chat/completions', async (req, res) => {
       messages: messages,
       temperature: temperature !== undefined ? temperature : 0.6,
       max_tokens: max_tokens || 9024,
-      stream: stream || false
+      stream: stream || false,
+      // Always explicitly set thinking mode to prevent models from defaulting to thinking
+      extra_body: { chat_template_kwargs: { thinking: ENABLE_THINKING_MODE } }
     };
-
-    // Always explicitly set thinking based on the toggle
-    nimRequest.extra_body = { chat_template_kwargs: { thinking: ENABLE_THINKING_MODE } };
     
     console.log('Sending request to NVIDIA NIM:', JSON.stringify(nimRequest, null, 2));
     
