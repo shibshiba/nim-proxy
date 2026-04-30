@@ -36,7 +36,6 @@ const MODEL_MAPPING = {
   'gemma-4': 'google/gemma-4-31b-it',
   'qwen3.5': 'qwen/qwen3.5-122b-a10b',
   'qwen3.51': 'qwen/qwen3.5-397b-a17b',
-  'minimax-m2': 'minimaxai/minimax-m2.7'
 };
 
 // Root endpoint
