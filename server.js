@@ -31,6 +31,7 @@ const ENABLE_THINKING_MODE = false; // Set to true to enable thinking mode
 const MODEL_MAPPING = {
   'gpt-4o': 'deepseek-ai/deepseek-v3.1',
   'kimi-k2.5': 'moonshotai/kimi-k2.5',
+  'kimi-k2.6': 'moonshotai/kimi-k2.6',
   'glm-5.1': 'z-ai/glm-5.1',
   'gpt-4': 'deepseek-ai/deepseek-v4-flash',
   'gpt-4p': 'deepseek-ai/deepseek-v4-pro',
