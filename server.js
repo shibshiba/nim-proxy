@@ -36,7 +36,8 @@ const MODEL_MAPPING = {
   'gpt-4': 'deepseek-ai/deepseek-v4-flash',
   'gpt-4p': 'deepseek-ai/deepseek-v4-pro',
   'gemma-4': 'google/gemma-4-31b-it',
-  'qwen3.5': 'qwen/qwen3.5-122b-a10b'
+  'qwen3.5': 'qwen/qwen3.5-122b-a10b',
+  'mistral3.5': 'mistralai/mistral-medium-3.5-128b'
 };
 
 // Root endpoint
