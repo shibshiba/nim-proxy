@@ -154,8 +154,7 @@ app.post('/v1/chat/completions', async (req, res) => {
       temperature: temperature !== undefined ? temperature : 0.6,
       max_tokens: max_tokens || 9024,
       stream: stream || false,
-      // Always explicitly set thinking mode to prevent models from defaulting to thinking
-      extra_body: { chat_template_kwargs: { thinking: ENABLE_THINKING_MODE } }
+      chat_template_kwargs: { thinking: ENABLE_THINKING_MODE }
     };
     
     console.log('Sending request to NVIDIA NIM:', JSON.stringify(nimRequest, null, 2));
