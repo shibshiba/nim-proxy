@@ -29,6 +29,7 @@ const ENABLE_THINKING_MODE = true; // Set to true to enable thinking mode
 
 // Model mapping (adjust based on available NIM models)
 const MODEL_MAPPING = {
+  'kimi-k2.5': 'moonshotai/kimi-k2.5',
   'kimi-k2.6': 'moonshotai/kimi-k2.6',
   'glm-5.1': 'z-ai/glm-5.1',
   'gpt-4': 'deepseek-ai/deepseek-v4-flash',
