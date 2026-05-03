@@ -137,8 +137,14 @@ app.post('/v1/chat/completions', async (req, res) => {
       }
       
     if (!nimModel) {
-      nimModel = 'qwen/qwen3.5-122b-a10b';
-      console.log(`Using fallback model: ${nimModel}`);
+      const modelLower = model.toLowerCase();
+      if (modelLower.includes('gpt-4') || modelLower.includes('claude-opus') || modelLower.includes('405b')) {
+        nimModel = 'meta/llama-3.1-405b-instruct';
+      } else if (modelLower.includes('claude') || modelLower.includes('gemini') || modelLower.includes('70b')) {
+        nimModel = 'meta/llama-3.1-70b-instruct';
+      } else {
+        nimModel = 'meta/llama-3.1-8b-instruct';
+      }
     }
         
     // Transform OpenAI request to NIM format
