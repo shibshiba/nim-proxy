@@ -29,9 +29,8 @@ const ENABLE_THINKING_MODE = true; // Set to true to enable thinking mode
 
 // Model mapping (adjust based on available NIM models)
 const MODEL_MAPPING = {
-  'minimax': 'minimaxai/minimax-m2.7',
+  'kimi-k2.5': 'moonshotai/kimi-k2.5',
   'kimi-k2.6': 'moonshotai/kimi-k2.6',
-  'glm-4.7': 'z-ai/glm4.7',
   'glm-5.1': 'z-ai/glm-5.1',
   'gpt-4': 'deepseek-ai/deepseek-v4-flash',
   'gpt-4p': 'deepseek-ai/deepseek-v4-pro',
@@ -136,17 +135,19 @@ app.post('/v1/chat/completions', async (req, res) => {
         console.log('Model test failed, using fallback logic');
       }
       
-    if (!nimModel) {
-      const modelLower = model.toLowerCase();
-      if (modelLower.includes('gpt-4') || modelLower.includes('claude-opus') || modelLower.includes('405b')) {
-        nimModel = 'meta/llama-3.1-405b-instruct';
-      } else if (modelLower.includes('claude') || modelLower.includes('gemini') || modelLower.includes('70b')) {
-        nimModel = 'meta/llama-3.1-70b-instruct';
-      } else {
-        nimModel = 'meta/llama-3.1-8b-instruct';
+      if (!nimModel) {
+        const modelLower = model.toLowerCase();
+        if (modelLower.includes('gpt-4') || modelLower.includes('claude-opus') || modelLower.includes('405b')) {
+          nimModel = 'meta/llama-3.1-405b-instruct';
+        } else if (modelLower.includes('claude') || modelLower.includes('gemini') || modelLower.includes('70b')) {
+          nimModel = 'meta/llama-3.1-70b-instruct';
+        } else {
+          nimModel = 'meta/llama-3.1-8b-instruct';
+        }
+        console.log(`Using fallback model: ${nimModel}`);
       }
     }
-        
+    
     // Transform OpenAI request to NIM format
     const nimRequest = {
       model: nimModel,
