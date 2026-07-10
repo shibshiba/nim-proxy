@@ -30,7 +30,7 @@ const ENABLE_THINKING_MODE = true; // Set to true to enable thinking mode
 // Model mapping (adjust based on available NIM models)
 const MODEL_MAPPING = {
   'minimax': 'minimaxai/minimax-m2.7',
-  'kimi-k2.6': 'moonshotai/kimi-k2.6',
+  'kimi-k2.7': 'moonshotai/kimi-k2.7',
   'glm-5.2': 'z-ai/glm-5.2',
   'gpt-4': 'deepseek-ai/deepseek-v4-flash',
   'gpt-4p': 'deepseek-ai/deepseek-v4-pro',
