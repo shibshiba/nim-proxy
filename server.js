@@ -30,7 +30,7 @@ const ENABLE_THINKING_MODE = true; // Set to true to enable thinking mode
 // Model mapping (adjust based on available NIM models)
 const MODEL_MAPPING = {
   'glm-5.2': 'z-ai/glm-5.2',
-  'gemma-4': 'google/gemma-4-31b-it',
+  'nemo': 'nvidia/nemotron-3-ultra-550b-a55b',
 };
 
 // 🔥 Only send chat_template_kwargs.thinking to models that actually support
@@ -38,6 +38,7 @@ const MODEL_MAPPING = {
 // the model to never emit a stop token, so the request hangs until max_tokens.
 const THINKING_CAPABLE_MODELS = new Set([
   'z-ai/glm-5.2',
+  'nvidia/nemotron-3-ultra-550b-a55b',
 ]);
 
 // Root endpoint
