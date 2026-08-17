@@ -33,6 +33,13 @@ const MODEL_MAPPING = {
   'gemma-4': 'google/gemma-4-31b-it',
 };
 
+// 🔥 Only send chat_template_kwargs.thinking to models that actually support
+// a thinking/reasoning template. Gemma doesn't, and sending it anyway causes
+// the model to never emit a stop token, so the request hangs until max_tokens.
+const THINKING_CAPABLE_MODELS = new Set([
+  'z-ai/glm-5.2',
+]);
+
 // Root endpoint
 app.get('/', (req, res) => {
   res.json({
@@ -142,6 +149,10 @@ app.post('/v1/chat/completions', async (req, res) => {
       }
     }
     
+    // Only enable thinking mode for models that actually support it
+    const useThinking = ENABLE_THINKING_MODE && THINKING_CAPABLE_MODELS.has(nimModel);
+    console.log(`Thinking mode for ${nimModel}: ${useThinking ? 'ENABLED' : 'DISABLED'}`);
+    
     // Transform OpenAI request to NIM format
     const nimRequest = {
       model: nimModel,
@@ -149,7 +160,7 @@ app.post('/v1/chat/completions', async (req, res) => {
       temperature: temperature !== undefined ? temperature : 0.6,
       max_tokens: max_tokens || 9024,
       stream: stream || false,
-      chat_template_kwargs: { thinking: ENABLE_THINKING_MODE }
+      ...(useThinking ? { chat_template_kwargs: { thinking: true } } : {})
     };
     
     console.log('Sending request to NVIDIA NIM:', JSON.stringify(nimRequest, null, 2));
