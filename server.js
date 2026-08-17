@@ -29,14 +29,8 @@ const ENABLE_THINKING_MODE = true; // Set to true to enable thinking mode
 
 // Model mapping (adjust based on available NIM models)
 const MODEL_MAPPING = {
-  'minimax': 'minimaxai/minimax-m2.7',
-  'kimi-k2.7': 'moonshotai/kimi-k2.7',
   'glm-5.2': 'z-ai/glm-5.2',
-  'gpt-4': 'deepseek-ai/deepseek-v4-flash',
-  'gpt-4p': 'deepseek-ai/deepseek-v4-pro',
   'gemma-4': 'google/gemma-4-31b-it',
-  'qwen3.5': 'qwen/qwen3.5-122b-a10b',
-  'qwen3.51': 'qwen/qwen3.5-397b-a17b',
 };
 
 // Root endpoint
