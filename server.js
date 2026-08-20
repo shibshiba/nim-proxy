@@ -32,6 +32,7 @@ const MODEL_MAPPING = {
   'glm-5.2': 'z-ai/glm-5.2',
   'nemo': 'nvidia/nemotron-3-ultra-550b-a55b',
   'gemma': 'google/diffusiongemma-26b-a4b-it',
+  'minimax': 'minimaxai/minimax-m3',
 };
 
 // 🔥 Only send chat_template_kwargs.thinking to models that actually support
@@ -41,6 +42,7 @@ const THINKING_CAPABLE_MODELS = new Set([
   'z-ai/glm-5.2',
   'nvidia/nemotron-3-ultra-550b-a55b',
   'google/diffusiongemma-26b-a4b-it',
+  'minimaxai/minimax-m3',
 ]);
 
 // Root endpoint
