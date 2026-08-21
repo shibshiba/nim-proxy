@@ -33,6 +33,7 @@ const MODEL_MAPPING = {
   'nemo': 'nvidia/nemotron-3-ultra-550b-a55b',
   'gemma': 'google/diffusiongemma-26b-a4b-it',
   'minimax': 'minimaxai/minimax-m3',
+  'kimi-k3': 'moonshotai/kimi-k3',
 };
 
 // 🔥 Only send chat_template_kwargs.thinking to models that actually support
@@ -43,6 +44,7 @@ const THINKING_CAPABLE_MODELS = new Set([
   'nvidia/nemotron-3-ultra-550b-a55b',
   'google/diffusiongemma-26b-a4b-it',
   'minimaxai/minimax-m3',
+  'moonshotai/kimi-k3',
 ]);
 
 // Root endpoint
