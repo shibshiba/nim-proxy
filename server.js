@@ -34,6 +34,7 @@ const MODEL_MAPPING = {
   'gemma': 'google/diffusiongemma-26b-a4b-it',
   'minimax': 'minimaxai/minimax-m3',
   'kimi-k3': 'moonshotai/kimi-k3',
+  'kimi-k2.6': 'moonshotai/kimi-k2.6',
 };
 
 // 🔥 Only send chat_template_kwargs.thinking to models that actually support
@@ -45,6 +46,7 @@ const THINKING_CAPABLE_MODELS = new Set([
   'google/diffusiongemma-26b-a4b-it',
   'minimaxai/minimax-m3',
   'moonshotai/kimi-k3',
+  'moonshotai/kimi-k2.6',
 ]);
 
 // Root endpoint
