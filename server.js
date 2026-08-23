@@ -29,7 +29,7 @@ const ENABLE_THINKING_MODE = true; // Set to true to enable thinking mode
 
 // Model mapping (adjust based on available NIM models)
 const MODEL_MAPPING = {
-  'glm-5.2': 'z-ai/glm-5.2',
+  'glm-5.3': 'z-ai/glm-5.3',
   'nemo': 'nvidia/nemotron-3-ultra-550b-a55b',
   'gemma': 'google/diffusiongemma-26b-a4b-it',
   'minimax': 'minimaxai/minimax-m3',
@@ -41,7 +41,7 @@ const MODEL_MAPPING = {
 // a thinking/reasoning template. Gemma doesn't, and sending it anyway causes
 // the model to never emit a stop token, so the request hangs until max_tokens.
 const THINKING_CAPABLE_MODELS = new Set([
-  'z-ai/glm-5.2',
+  'z-ai/glm-5.3',
   'nvidia/nemotron-3-ultra-550b-a55b',
   'google/diffusiongemma-26b-a4b-it',
   'minimaxai/minimax-m3',
