@@ -48,7 +48,7 @@ const THINKING_CAPABLE_MODELS = new Set([
   'minimaxai/minimax-m3',
   'moonshotai/kimi-k3',
   'moonshotai/kimi-k2.6',
-  'meta/muse-glimmer-30b',
+  //'meta/muse-glimmer-30b',
 ]);
 
 // Root endpoint
