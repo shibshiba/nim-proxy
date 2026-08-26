@@ -35,6 +35,7 @@ const MODEL_MAPPING = {
   'minimax': 'minimaxai/minimax-m3',
   'kimi-k3': 'moonshotai/kimi-k3',
   'kimi-k2.6': 'moonshotai/kimi-k2.6',
+  'laguna': 'poolside/laguna-xs-2.1',
 };
 
 // 🔥 Only send chat_template_kwargs.thinking to models that actually support
@@ -47,6 +48,7 @@ const THINKING_CAPABLE_MODELS = new Set([
   'minimaxai/minimax-m3',
   'moonshotai/kimi-k3',
   'moonshotai/kimi-k2.6',
+  'poolside/laguna-xs-2.1',
 ]);
 
 // Root endpoint
