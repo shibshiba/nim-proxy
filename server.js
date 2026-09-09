@@ -32,10 +32,10 @@ const MODEL_MAPPING = {
   'glm-5.3': 'z-ai/glm-5.3',
   'nemo': 'nvidia/nemotron-3-ultra-550b-a55b',
   'gemma': 'google/diffusiongemma-26b-a4b-it',
-  'minimax': 'minimaxai/minimax-m3',
   'kimi-k3': 'moonshotai/kimi-k3',
   'kimi-k2.6': 'moonshotai/kimi-k2.6',
   'deepseek': 'deepseek-ai/deepseek-v4-flash-0731',
+  'deepseekp': 'deepseek-ai/deepseek-v4-pro-0813',
 };
 
 // 🔥 Only send chat_template_kwargs.thinking to models that actually support
