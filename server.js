@@ -45,10 +45,10 @@ const THINKING_CAPABLE_MODELS = new Set([
   'z-ai/glm-5.3',
   'nvidia/nemotron-3-ultra-550b-a55b',
   'google/diffusiongemma-26b-a4b-it',
-  'minimaxai/minimax-m3',
   'moonshotai/kimi-k3',
   'moonshotai/kimi-k2.6',
   'deepseek-ai/deepseek-v4-flash-0731',
+  'deepseek-ai/deepseek-v4-pro-0813',
 ]);
 
 // Root endpoint
