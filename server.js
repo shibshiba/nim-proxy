@@ -35,7 +35,7 @@ const MODEL_MAPPING = {
   'kimi-k3': 'moonshotai/kimi-k3',
   'kimi-k2.6': 'moonshotai/kimi-k2.6',
   'deepseek': 'deepseek-ai/deepseek-v4-flash-0731',
-  'deepseekp': 'deepseek-ai/deepseek-v4-pro-0813',
+  'GLM': 'zai-org/GLM-5.3-Flash',
 };
 
 // 🔥 Only send chat_template_kwargs.thinking to models that actually support
@@ -48,7 +48,7 @@ const THINKING_CAPABLE_MODELS = new Set([
   'moonshotai/kimi-k3',
   'moonshotai/kimi-k2.6',
   'deepseek-ai/deepseek-v4-flash-0731',
-  'deepseek-ai/deepseek-v4-pro-0813',
+  'zai-org/GLM-5.3-Flash',
 ]);
 
 // Root endpoint
