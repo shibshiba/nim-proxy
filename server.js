@@ -29,13 +29,12 @@ const ENABLE_THINKING_MODE = true; // Set to true to enable thinking mode
 
 // Model mapping (adjust based on available NIM models)
 const MODEL_MAPPING = {
-  'glm-5.3': 'z-ai/glm-5.3',
+  'glm-5.3': 'z-ai/glm-5.3-flash',
   'nemo': 'nvidia/nemotron-3-ultra-550b-a55b',
   'gemma': 'google/diffusiongemma-26b-a4b-it',
   'kimi-k3': 'moonshotai/kimi-k3',
   'kimi-k2.6': 'moonshotai/kimi-k2.6',
   'deepseek': 'deepseek-ai/deepseek-v4-flash-0731',
-  'GLM': 'zai-org/GLM-5.3-Flash',
 };
 
 // 🔥 Only send chat_template_kwargs.thinking to models that actually support
@@ -48,7 +47,6 @@ const THINKING_CAPABLE_MODELS = new Set([
   'moonshotai/kimi-k3',
   'moonshotai/kimi-k2.6',
   'deepseek-ai/deepseek-v4-flash-0731',
-  'zai-org/GLM-5.3-Flash',
 ]);
 
 // Root endpoint
