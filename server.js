@@ -29,7 +29,8 @@ const ENABLE_THINKING_MODE = true; // Set to true to enable thinking mode
 
 // Model mapping (adjust based on available NIM models)
 const MODEL_MAPPING = {
-  'glm-5.3': 'z-ai/glm-5.3-flash',
+  'glm-5.3-flash': 'z-ai/glm-5.3-flash',
+  'glm-5.3': 'z-ai/glm-5.3',
   'nemo': 'nvidia/nemotron-3-ultra-550b-a55b',
   'gemma': 'google/diffusiongemma-26b-a4b-it',
   'kimi-k3': 'moonshotai/kimi-k3',
@@ -42,6 +43,7 @@ const MODEL_MAPPING = {
 // the model to never emit a stop token, so the request hangs until max_tokens.
 const THINKING_CAPABLE_MODELS = new Set([
   'z-ai/glm-5.3-flash',
+  'z-ai/glm-5.3',
   'nvidia/nemotron-3-ultra-550b-a55b',
   'google/diffusiongemma-26b-a4b-it',
   'moonshotai/kimi-k3',
