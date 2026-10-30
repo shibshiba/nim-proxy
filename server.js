@@ -31,7 +31,7 @@ const ENABLE_THINKING_MODE = true; // Set to true to enable thinking mode
 const MODEL_MAPPING = {
   'glm-5.3-flash': 'z-ai/glm-5.3-flash',
   'minimax-m3.1': 'minimaxai/minimax-m3.1-flash',
-  'nemo': 'nvidia/nemotron-3-ultra-550b-a55b',
+  'mistal-4': 'mistralai/mistral-large-4-1t-a52b',
   'gemma': 'google/diffusiongemma-26b-a4b-it',
   'kimi-k3': 'moonshotai/kimi-k3',
   'kimi-k2.6': 'moonshotai/kimi-k2.6',
@@ -44,7 +44,7 @@ const MODEL_MAPPING = {
 const THINKING_CAPABLE_MODELS = new Set([
   'z-ai/glm-5.3-flash',
   'minimaxai/minimax-m3.1-flash',
-  'nvidia/nemotron-3-ultra-550b-a55b',
+  'mistralai/mistral-large-4-1t-a52b',
   'google/diffusiongemma-26b-a4b-it',
   'moonshotai/kimi-k3',
   'moonshotai/kimi-k2.6',
