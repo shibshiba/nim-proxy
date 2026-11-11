@@ -33,7 +33,7 @@ const MODEL_MAPPING = {
   'minimax-m3.1': 'minimaxai/minimax-m3.1-flash',
   'mistal-4': 'mistralai/mistral-large-4-1t-a52b',
   'gemma': 'google/diffusiongemma-26b-a4b-it',
-  'kimi-k3': 'moonshotai/kimi-k3',
+  'kimi-k3.1-pro': 'moonshotai/kimi-k3.1-pro',
   'kimi-k2.6': 'moonshotai/kimi-k2.6',
   'deepseek': 'deepseek-ai/deepseek-v4.1-flash',
 };
@@ -46,7 +46,7 @@ const THINKING_CAPABLE_MODELS = new Set([
   'minimaxai/minimax-m3.1-flash',
   'mistralai/mistral-large-4-1t-a52b',
   'google/diffusiongemma-26b-a4b-it',
-  'moonshotai/kimi-k3',
+  'moonshotai/kimi-k3.1-pro',
   'moonshotai/kimi-k2.6',
   'deepseek-ai/deepseek-v4.1-flash',
 ]);
